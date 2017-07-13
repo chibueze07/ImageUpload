@@ -7,7 +7,7 @@ function imageUpload()
     $jpgforce  = pathinfo($filepath, PATHINFO_EXTENSION);
     if (empty($_FILES['image']['name'])) {
         $message = "No file uploaded!";
-    } else if ($jpgforce != '.jpg') {
+    } else if ($jpgforce != 'jpg') {
         $message = "All images MUST be .jpg format";
     } else if ($_FILES["image"]["size"] > 500000) {
         echo "Sorry, your image is too large.";
